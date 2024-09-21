@@ -49,9 +49,11 @@ function handleBackSpace() {
 
 function calculateResult ()  {
     let displayResult = displayResultEle.value;
-    result = eval(displayResult);
-    displayResultEle.value = result;
-    addToHistory(displayResult);
+    if (result !== '0') {
+        result = eval(displayResult);
+        displayResultEle.value = result;
+        addToHistory(displayResult);
+    }
 }
 
 
